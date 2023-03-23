@@ -11,11 +11,11 @@ module.exports = {
             dark: '#60636D',
             DEFAULT: '#7D828F',
             light: '#C8CCD8',
-            lightest: '#EEEFF4',
+            lightest: '#f9fafc',
         },
         red: {
             DEFAULT: '#DF5656',
-        }
+        },
     },
   },
   plugins: [],
