@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/react-tailwind-webapp/static/css/main.b103b584.css",
+    "main.js": "/react-tailwind-webapp/static/js/main.0bccc619.js",
+    "static/js/787.fd14806f.chunk.js": "/react-tailwind-webapp/static/js/787.fd14806f.chunk.js",
+    "static/media/league-spartan-700.woff": "/react-tailwind-webapp/static/media/league-spartan-700.d3e37c85729e0b2edc62.woff",
+    "static/media/league-spartan-700.woff2": "/react-tailwind-webapp/static/media/league-spartan-700.c361e347e1ea03d250a5.woff2",
+    "static/media/logo.svg": "/react-tailwind-webapp/static/media/logo.ddbfb6873fe10618a4a792bcf16bace2.svg",
+    "index.html": "/react-tailwind-webapp/index.html",
+    "main.b103b584.css.map": "/react-tailwind-webapp/static/css/main.b103b584.css.map",
+    "main.0bccc619.js.map": "/react-tailwind-webapp/static/js/main.0bccc619.js.map",
+    "787.fd14806f.chunk.js.map": "/react-tailwind-webapp/static/js/787.fd14806f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b103b584.css",
+    "static/js/main.0bccc619.js"
+  ]
+}
