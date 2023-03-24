@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
 import PropTypes from "prop-types";
 
+import logo from '../images/logo.svg';
+
 function Navbar(props) {
     const { navItems } = props;
     const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex flex-wrap items-center justify-between px-4 py-3 bg-white">
-      <div className="flex items-center justify-between w-full md:w-auto">
-        <a href="/" className="font-bold text-xl text-purple-500">Logo</a>
+    <nav className="flex flex-wrap sm:flex-nowrap items-center px-4 py-10 bg-white">
+      <div className="flex items-center justify-between w-full sm:w-auto">
+        <a 
+            href="/" 
+            title="Arch Logo" 
+            className="mr-20"
+        >
+            <img src={logo} alt="Arch Logo" />
+        </a>
         <button
-          className="block md:hidden focus:outline-none focus:bg-gray-700"
+          className="block sm:hidden focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg
@@ -30,17 +38,19 @@ function Navbar(props) {
         </button>
       </div>
 
-      <div
-        className={`${isOpen ? 'block' : 'hidden'} md:flex md:items-center w-full md:w-auto`}
-      >
-        <ul className="text-gray-800 md:flex-grow md:flex md:justify-end">
-          {navItems.map((item, index) => (
-            <li key={index} className="mt-3 md:mt-0 md:ml-6">
-              <a href={item.url}>{item.label}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
+        <div
+            className={`${isOpen ? 'block' : 'hidden'} 
+            sm:flex sm:items-center w-full max-sm-h-screen max-sm-absolute max-sm-top-24 
+            max-sm-left-0 max-sm-bottom-0 max-sm-bg-grey max-sm-opacity-50 z-50`}
+        >
+            <ul className="sm:text-grey sm:flex-grow sm:flex justify-around max-w-[500px] relative z-50">
+                {navItems.map((item, index) => (
+                    <li key={index} className="mt-3 sm:mt-0">
+                        <a href={item.url}>{item.label}</a>
+                    </li>
+                ))}
+            </ul>
+        </div>
     </nav>
   );
 }
