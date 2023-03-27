@@ -1,11 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 import logo from '../images/logo.svg';
 
 function Navbar(props) {
     const { navItems } = props;
     const [isOpen, setIsOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+    
+    useEffect(() => {
+        setIsMobile(window.innerWidth < 768);
+    }, []);
+    
+    const menuClasses = classNames({
+        'flex': true,
+        'justify-around': true, 
+        'max-w-[500px]': true, 
+        'z-50': true,
+        'flex-col': isMobile,
+        'items-start': isMobile,
+        'pl-10': isMobile,
+        'py-10': isMobile,
+        'text-lg': isMobile,
+        'animate-slide': isMobile,
+        'absolute': isMobile,
+        'w-96': isMobile,
+        'h-56': isMobile,
+        'top-24': isMobile,
+        'right-0': isMobile,
+        'bg-[#EEEFF4]': isMobile, 
+        'text-grey': !isMobile,
+        'flex-grow': !isMobile, 
+        'hidden': isMobile && !isOpen,
+        'block': isMobile && isOpen,
+    });
 
   return (
     <nav className="flex flex-wrap sm:flex-nowrap items-center px-4 py-10 bg-white">
@@ -41,19 +70,18 @@ function Navbar(props) {
         <div
             className={`${isOpen ? 'block' : 'hidden'} sm:hidden 
             absolute inset-0 top-24 
-            transition ease-in-out bg-grey opacity-20 duration-300 z-50`}
+            bg-grey-darkest opacity-20 animate-fade z-50`}
         >
         </div>
-            <ul 
-                className={`${isOpen ? 'block' : 'hidden'}
-                sm:text-grey sm:flex-grow sm:flex justify-around max-w-[500px] 
-                bg-grey-dark z-50`}>
-                {navItems.map((item, index) => (
-                    <li key={index} className="mt-3 sm:mt-0">
-                        <a href={item.url}>{item.label}</a>
-                    </li>
-                ))}
-            </ul>
+        <ul 
+            className={`${menuClasses}`}
+        >
+            {navItems.map((item, index) => (
+                <li key={index} className="mt-3 sm:mt-0">
+                    <a href={item.url}>{item.label}</a>
+                </li>
+            ))}
+        </ul>
     </nav>
   );
 }

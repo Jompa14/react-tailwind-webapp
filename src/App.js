@@ -9,8 +9,8 @@ function App() {
         navItems={
             [
                 { label: 'Portfolio', url: '/portfolio' },
-                { label: 'Contact', url: '/contact' },
                 { label: 'About Us', url: '/about' },
+                { label: 'Contact', url: '/contact' },
             ]}
     />
 

@@ -4,7 +4,30 @@ module.exports = {
       "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+        keyframes: {
+            'fade-in': {
+                '0%': {
+                    opacity: '0',
+                },
+                '10%': {
+                    opacity: '.2',
+                },
+            },
+            'slide': {
+                'from': {
+                    transform: 'translateX(200px)',
+                },
+                'to': {
+                    transform: 'translateX(10px)',
+                }
+            }
+        },
+        animation: {
+            'fade': 'fade-in 0.9s ease-in',
+            'slide': 'slide 0.7s ease-in'
+        }
+    },
     colors: {
         grey: {
             darkest: '#1B1D23',
@@ -12,6 +35,9 @@ module.exports = {
             DEFAULT: '#7D828F',
             light: '#C8CCD8',
             lightest: '#f9fafc',
+        },
+        white: {
+            DEFAULT: '#F2F2F2'
         },
         red: {
             DEFAULT: '#DF5656',
