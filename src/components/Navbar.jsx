@@ -39,18 +39,21 @@ function Navbar(props) {
       </div>
 
         <div
-            className={`${isOpen ? 'block' : 'hidden'} 
-            sm:flex sm:items-center w-full max-sm-h-screen max-sm-absolute max-sm-top-24 
-            max-sm-left-0 max-sm-bottom-0 max-sm-bg-grey max-sm-opacity-50 z-50`}
+            className={`${isOpen ? 'block' : 'hidden'} sm:hidden 
+            absolute inset-0 top-24 
+            transition ease-in-out bg-grey opacity-20 duration-300 z-50`}
         >
-            <ul className="sm:text-grey sm:flex-grow sm:flex justify-around max-w-[500px] relative z-50">
+        </div>
+            <ul 
+                className={`${isOpen ? 'block' : 'hidden'}
+                sm:text-grey sm:flex-grow sm:flex justify-around max-w-[500px] 
+                bg-grey-dark z-50`}>
                 {navItems.map((item, index) => (
                     <li key={index} className="mt-3 sm:mt-0">
                         <a href={item.url}>{item.label}</a>
                     </li>
                 ))}
             </ul>
-        </div>
     </nav>
   );
 }
