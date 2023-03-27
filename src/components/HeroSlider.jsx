@@ -1,13 +1,39 @@
 import { useState, useEffect } from 'react';
 
+import paramourImage from '../images/home/desktop/image-hero-paramour.jpg';
+import federalImage from '../images/home/desktop/image-hero-federal.jpg';
+import seraphImage from '../images/home/desktop/image-hero-seraph.jpg';
+import trinityImage from '../images/home/desktop/image-hero-trinity.jpg';
+
+
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
 
   const slides = [
-    { title: 'First Slide', subtitle: 'This is the subtitle of the first slide', image: 'https://via.placeholder.com/1920x1080' },
-    { title: 'Second Slide', subtitle: 'This is the subtitle of the second slide', image: 'https://via.placeholder.com/1920x1080' },
-    { title: 'Third Slide', subtitle: 'This is the subtitle of the third slide', image: 'https://via.placeholder.com/1920x1080' },
-    { title: 'Fourth Slide', subtitle: 'This is the subtitle of the fourth slide', image: 'https://via.placeholder.com/1920x1080' },
+    { 
+        title: 'First Slide', 
+        subtitle: 'This is the subtitle of the first slide', 
+        image: paramourImage,
+        alt: 'paramour image' 
+    },
+    { 
+        title: 'Third Slide', 
+        subtitle: 'This is the subtitle of the third slide', 
+        image: seraphImage,
+        alt: 'seraph image'
+    },
+    { 
+        title: 'Second Slide', 
+        subtitle: 'This is the subtitle of the second slide', 
+        image: federalImage,
+        alt: 'federal image'
+    },
+    { 
+        title: 'Fourth Slide', 
+        subtitle: 'This is the subtitle of the fourth slide', 
+        image: trinityImage, 
+        alt: 'trinity image'
+    },
   ];
 
   useEffect(() => {
