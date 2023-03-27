@@ -48,7 +48,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative flex flex-col justify-center h-screen">
+    <div className="relative flex flex-col justify-center h-[82vh]">
         <div 
             className="absolute top-0 left-0 w-full h-full bg-cover bg-center" 
             style={{ backgroundImage: `url(${slides[currentSlide - 1].image})` }}
