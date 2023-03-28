@@ -4,7 +4,7 @@ import HeroSlider from './components/HeroSlider';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App md:mx-[10%]">
         <Navbar
             navItems={
                 [

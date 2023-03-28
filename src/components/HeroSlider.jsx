@@ -12,26 +12,26 @@ const Slider = () => {
 
   const slides = [
     { 
-        title: 'First Slide', 
-        subtitle: 'This is the subtitle of the first slide', 
+        title: 'Project  Paramour', 
+        subtitle: 'Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture.', 
         image: paramourImage,
         alt: 'paramour image' 
     },
     { 
-        title: 'Third Slide', 
-        subtitle: 'This is the subtitle of the third slide', 
+        title: 'Seraph Station', 
+        subtitle: 'The Seraph Station project challenged us to design a unique station that would transport people through time.The result is a fresh and futuristic model inspired by space stations.', 
         image: seraphImage,
         alt: 'seraph image'
     },
     { 
-        title: 'Second Slide', 
-        subtitle: 'This is the subtitle of the second slide', 
+        title: 'Federal II Tower', 
+        subtitle: 'A sequel theme project for a tower originally built in the 1800s. We achieved this with a striking look of brutal minimalism with modern touches.', 
         image: federalImage,
         alt: 'federal image'
     },
     { 
-        title: 'Fourth Slide', 
-        subtitle: 'This is the subtitle of the fourth slide', 
+        title: 'Trinity Bank Tower', 
+        subtitle: 'Trinity Bank challenged us to make a concept for a 84 story building located in the middle of a city with a high earthquake frequency. For this project we used curves to blend design and stability to meet our objectives.', 
         image: trinityImage, 
         alt: 'trinity image'
     },
@@ -39,7 +39,7 @@ const Slider = () => {
 
   useEffect(() => {
   // Check if window matches desktop media query
-  const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+  const isDesktop = window.matchMedia("(min-width: 768px)").matches;
 
   // Only start interval if window is desktop
   if (isDesktop) {
@@ -60,10 +60,13 @@ const Slider = () => {
   return (
     <div className="relative flex flex-col justify-center h-[82vh]">
         <div 
-            className="absolute top-0 left-0 w-full h-full bg-cover bg-center" 
+            className="absolute top-0 left-0 w-full h-full mix-blend-darken bg-cover bg-center" 
             style={{ backgroundImage: `url(${slides[currentSlide - 1].image})` }}
         >
-            <div className="flex flex-col items-center justify-center h-full">
+            <div 
+                className={`flex flex-col items-start text-white ml-10 md:ml-40 
+                justify-center max-w-[400px] md:max-w-[450px] h-full`}
+            >
                 <h1 
                     className={`text-6xl font-bold ${currentSlide === 1 ? 'block' : 'hidden'}`}
                 >
@@ -74,16 +77,19 @@ const Slider = () => {
                 >
                     {slides[currentSlide - 1].title}
                 </h2>
-                <p className="mt-4 text-xl">{slides[currentSlide - 1].subtitle}</p>
-                <button className="flex items-center px-6 py-2 mt-8 text-xl font-semibold text-white bg-black rounded-full hover:bg-gray-900">
-                    Get Started
+                
+                <p className="mt-4 ">{slides[currentSlide - 1].subtitle}</p>
+                
+                <button 
+                    className="flex items-center px-6 py-4 mt-24 md:mt-12 text-white bg-grey-darkest hover:bg-grey-dark">
+                    See Our Portfolio
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 ml-2" viewBox="0 0 24 24" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" stroke="currentColor">
                         <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                 </button>
             </div>
-      </div>
-        <div className="absolute bottom-0 -left-16 flex">
+        </div>
+        <div className="absolute bottom-0 -left-16 flex hidden md:block">
             {slides.map((slide, index) => (
                 <button 
                     key={index} 
