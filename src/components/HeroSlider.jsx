@@ -8,6 +8,7 @@ import trinityImage from '../images/home/desktop/image-hero-trinity.jpg';
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
 
   const slides = [
     { 
@@ -37,11 +38,20 @@ const Slider = () => {
   ];
 
   useEffect(() => {
+  // Check if window matches desktop media query
+  const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+
+  // Only start interval if window is desktop
+  if (isDesktop) {
     const intervalId = setInterval(() => {
       setCurrentSlide((currentSlide) => (currentSlide % slides.length) + 1);
     }, 10000);
+
+    // Clear interval when component unmounts
     return () => clearInterval(intervalId);
-  }, []);
+  }
+}, [slides]);
+
 
   const handleSlideClick = (index) => {
     setCurrentSlide(index + 1);
@@ -73,11 +83,16 @@ const Slider = () => {
                 </button>
             </div>
       </div>
-      <div className="absolute bottom-4 left-4 flex space-x-2">
-        {slides.map((slide, index) => (
-          <button key={index} className={`w-6 h-6 rounded-full ${index === currentSlide - 1 ? 'bg-black' : 'bg-white hover:bg-gray-200'}`} onClick={() => handleSlideClick(index)}>{(index + 1).toString().padStart(2, '0')}</button>
-        ))}
-      </div>
+        <div className="absolute bottom-0 -left-16 flex">
+            {slides.map((slide, index) => (
+                <button 
+                    key={index} 
+                    className={`w-16 h-16  
+                    ${index === currentSlide - 1 ? 'bg-grey-darkest text-white' : 'text-grey bg-white hover:bg-grey-light'}`} 
+                    onClick={() => handleSlideClick(index)}>{(index + 1).toString().padStart(2, '0')}
+                </button>
+            ))}
+        </div>
     </div>
   );
 };
