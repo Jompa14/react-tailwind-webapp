@@ -37,7 +37,7 @@ function Navbar(props) {
     });
 
   return (
-    <nav className="flex flex-wrap sm:flex-nowrap items-center px-4 py-10 bg-white">
+    <nav className="flex flex-wrap sm:flex-nowrap items-center px-7 md:px-0 py-10 bg-white">
       <div className="flex items-center justify-between w-full sm:w-auto">
         <a 
             href="/" 
@@ -51,7 +51,7 @@ function Navbar(props) {
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg
-            className="w-6 h-6 fill-current"
+            className="w-8 h-8 fill-current"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
