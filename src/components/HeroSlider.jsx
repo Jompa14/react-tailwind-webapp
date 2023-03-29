@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+import Button from './utils/Button';
+
 import paramourImage from '../images/home/desktop/image-hero-paramour.jpg';
 import federalImage from '../images/home/desktop/image-hero-federal.jpg';
 import seraphImage from '../images/home/desktop/image-hero-seraph.jpg';
@@ -78,15 +80,9 @@ const Slider = () => {
                     {slides[currentSlide - 1].title}
                 </h2>
                 
-                <p className="mt-4 ">{slides[currentSlide - 1].subtitle}</p>
+                <p className="mt-4 mb-24 md:mb-10 ">{slides[currentSlide - 1].subtitle}</p>
                 
-                <button 
-                    className="flex items-center px-6 py-4 mt-24 md:mt-12 text-white bg-grey-darkest hover:bg-grey-dark">
-                    See Our Portfolio
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 ml-2" viewBox="0 0 24 24" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" stroke="currentColor">
-                        <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                </button>
+                <Button text="See Our Portfolio" />
             </div>
         </div>
         <div className="absolute bottom-0 -left-16 flex hidden md:block">
