@@ -36,7 +36,13 @@ const Heading = ({ size = 'M', color = 'black', tag = 'h1', title }) => {
 
   return (
     <Tag
-      className={`font-bold text-${color} ${sizeProps.fontSize} leading-${sizeProps.lineHeight} tracking-${sizeProps.letterSpacing}`}
+        className={`
+            font-bold 
+            text-${color}
+            text-[${sizeProps.fontSize}] 
+            tracking-[${sizeProps.letterSpacing}]
+        `}
+
     >
       {title}
     </Tag>
