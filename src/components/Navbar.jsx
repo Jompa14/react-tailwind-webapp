@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink as Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
@@ -78,7 +79,7 @@ function Navbar(props) {
         >
             {navItems.map((item, index) => (
                 <li key={index} className="mt-3 sm:mt-0">
-                    <a href={item.url}>{item.label}</a>
+                    <Link to={item.url}>{item.label}</Link>
                 </li>
             ))}
         </ul>
