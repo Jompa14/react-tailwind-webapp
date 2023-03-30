@@ -5,27 +5,27 @@ const Heading = ({ size = 'M', color = 'black', tag = 'h1', title }) => {
     switch (size) {
       case 'XL':
         return {
-          fontSize: '250px',
-          lineHeight: '200px',
-          letterSpacing: '-5px',
+          fontSize: 'text-[250px]',
+          lineHeight: 'leading-[200px]',
+          letterSpacing: 'tracking-[-5px]',
         };
       case 'L':
         return {
-          fontSize: '96px',
-          lineHeight: '80px',
-          letterSpacing: '-2px',
+          fontSize: 'text-[96px]',
+          lineHeight: 'leading-[80px]',
+          letterSpacing: 'tracking-[-2px]',
         };
       case 'S':
         return {
-          fontSize: '32px',
-          lineHeight: '40px',
-          letterSpacing: '0',
+          fontSize: 'text-[32px]',
+          lineHeight: 'leading-[40px]',
+          letterSpacing: 'tracking-0',
         };
       default:
         return {
-          fontSize: '72px',
-          lineHeight: '64px',
-          letterSpacing: '-2px',
+          fontSize: 'texxt-[72px]',
+          lineHeight: 'leading-[64px]',
+          letterSpacing: 'tracking-[-2px]',
         };
     }
   };
@@ -38,9 +38,10 @@ const Heading = ({ size = 'M', color = 'black', tag = 'h1', title }) => {
     <Tag
         className={`
             font-bold 
-            text-${color}
-            text-[${sizeProps.fontSize}] 
-            tracking-[${sizeProps.letterSpacing}]
+            ${color}
+            ${sizeProps.fontSize} 
+            ${sizeProps.lineHeight}
+            ${sizeProps.letterSpacing}
         `}
 
     >

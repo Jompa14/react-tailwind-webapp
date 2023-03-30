@@ -4,12 +4,15 @@ import Heading from '../utils/heading.jsx'
 const Welcome = () => {
     
     return(
-        <Heading 
-            size="XL" 
-            color="grey-light" 
-            tag='h2' 
-            title="Welcome" 
-        />
+        <div>
+            <Heading 
+                size="XL" 
+                color="text-grey-light" 
+                tag='h2' 
+                title="Welcome" 
+            />
+            <p>oi</p>
+        </div>
     );
 };
 
