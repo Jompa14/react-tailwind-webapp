@@ -7,7 +7,7 @@ const Welcome = () => {
     
     return(
         <div className="mt-20">
-            <div className="absolute">
+            <div className="hidden md:block absolute">
                 <Heading 
                     size="XL" 
                     color="text-[#e2e2e2]" 
@@ -21,15 +21,15 @@ const Welcome = () => {
             >
                 <div 
                     id="titlePlusText" 
-                    className="flex flex-col mt-[210px]"
+                    className="flex flex-col md:mt-[210px] ml-10 md:ml-0"
                 >
                     <Heading
                         size="L"
                         tag="h3"
                         title="Welcome to Arch Studio"
-                        className="max-w-[600px]"
+                        className="max-w-[300px] sm:max-w-[600px]"
                     />
-                    <p className="max-w-[680px] mt-10 font-medium text-grey">
+                    <p className="max-w-[340px] sm:max-w-[680px] mt-10 font-medium text-grey">
                         We have a unique network and skillset to help bring your projects 
                         to life. Our small team of highly skilled individuals combined with 
                         our large network put us in a strong position to deliver exceptional results.
