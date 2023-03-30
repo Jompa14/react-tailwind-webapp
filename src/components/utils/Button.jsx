@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Button = ({ text = '' }) => {
+
+const Button = ({ text = '', to }) => {
+    
   const hasText = !!text;
-
+  
   const buttonStyle = `
     flex items-center justify-center w-16 h-16 rounded-md text-white
-    ${hasText ? 'px-6 py-4 w-auto' : ''}
+    ${hasText ? 'px-6 py-4 w-fit' : ''}
     bg-grey-darkest hover:bg-grey-dark active:bg-[#979797]
   `;
 
@@ -25,9 +28,11 @@ const Button = ({ text = '' }) => {
   );
 
   return (
-    <button className={buttonStyle}>
+    <Link to={to}
+        className={buttonStyle}
+    >
       {textElement}
-    </button>
+    </Link>
   );
 };
 
