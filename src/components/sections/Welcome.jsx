@@ -6,7 +6,7 @@ import welcomeImage from '../../images/home/desktop/image-welcome.jpg';
 const Welcome = () => {
     
     return(
-        <div className="mt-20">
+        <div className="mt-20 mb-40">
             <div className="hidden md:block absolute">
                 <Heading 
                     size="XL" 
