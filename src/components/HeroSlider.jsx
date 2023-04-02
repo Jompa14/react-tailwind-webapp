@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import Button from './utils/Button';
+import BackgroundImage from './utils/BackgroundImage.jsx';
 
 import paramourImage from '../images/home/desktop/image-hero-paramour.jpg';
 import federalImage from '../images/home/desktop/image-hero-federal.jpg';
@@ -61,10 +62,10 @@ const Slider = () => {
 
   return (
     <div className="relative flex flex-col justify-center h-[82vh]">
-        <div 
-            className="absolute top-0 left-0 w-full h-full mix-blend-darken bg-cover bg-center" 
-            style={{ backgroundImage: `url(${slides[currentSlide - 1].image})` }}
-        >
+        <BackgroundImage
+            className="brightness-50" 
+            img={`${slides[currentSlide - 1].image}`}
+        />
             <div 
                 className={`flex flex-col items-start text-white ml-10 md:ml-40 
                 justify-center max-w-[400px] md:max-w-[450px] h-full`}
@@ -84,7 +85,6 @@ const Slider = () => {
                 
                 <Button text="See Our Portfolio" />
             </div>
-        </div>
         <div className="absolute bottom-0 -left-16 flex hidden md:block">
             {slides.map((slide, index) => (
                 <button 
