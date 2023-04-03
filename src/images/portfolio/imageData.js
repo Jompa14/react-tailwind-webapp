@@ -1,7 +1,9 @@
 
 
 const images = require.context('./desktop', false, /\.jpg/);
-console.log(images('./image-228b.jpg').default,)
+console.log(images('./image-228b.jpg').default, 'oi')
+const test = images('./image-228b.jpg').default
+console.log(test, 'hi');
 const imageData = [
   {
     img: images('./image-228b.jpg').default,
