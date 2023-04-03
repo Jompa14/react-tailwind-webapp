@@ -1,11 +1,13 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Routes, Route}
-    from 'react-router-dom';
+import Footer from './components/Footer';
 import Home from './pages';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Portfolio from './pages/portfolio';
+
+import { BrowserRouter as Router, Routes, Route}
+from 'react-router-dom';
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
                 <Route path='/contact' element={<Contact/>} />
                 <Route path='/portfolio' element={<Portfolio/>} />
             </Routes>
+            <Footer />
         </div>
     </Router>
   );
