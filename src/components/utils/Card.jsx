@@ -5,7 +5,8 @@ import Heading from './heading.jsx';
 
 const Card = ({ title, subtitle, className, img }) => {
     const basicStyle = `
-        relative w-full h-full ${className}
+        relative w-full h-full flex flex-col justify-end 
+        pl-10 pb-10 ${className}
     `;
     
     return (
