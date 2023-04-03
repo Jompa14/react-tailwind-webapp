@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSlider from '../components/HeroSlider.jsx'
 import Welcome from '../components/sections/Welcome.jsx'
 import SmallTeam from '../components/sections/SmallTeam.jsx'
+import Featured from '../components/sections/Featured.jsx'
   
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
         <HeroSlider />
         <Welcome />
         <SmallTeam />
+        <Featured />
     </div>
   );
 };
