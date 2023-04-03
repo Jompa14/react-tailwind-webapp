@@ -1,11 +1,10 @@
 import React from "react";
+import PortfolioSection from '../components/sections/PortfolioSection.jsx'
   
 const Portfolio = () => {
   return (
     <div>
-      <h1>
-        é o grenio
-      </h1>
+      <PortfolioSection />
     </div>
   );
 };
