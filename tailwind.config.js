@@ -43,6 +43,9 @@ module.exports = {
         red: {
             DEFAULT: '#DF5656',
         },
+        translucent: {
+            DEFAULT: 'rgba(210, 206, 210, 0.42)',
+        }
     },
   },
   plugins: [],

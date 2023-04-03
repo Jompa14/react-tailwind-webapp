@@ -32,7 +32,10 @@ const Featured = () => {
                     title={card.title}
                     subtitle={card.subtitle}
                     alt={card.alt}
-                    className="grow h-[200px] lg:h-[500px] basis-[340px] mt-5 mr-5 last:mr-0"
+                    number={index + 1}
+                    className={`grow h-[200px] lg:h-[500px] basis-[340px]
+                        mt-5 mr-5 last:mr-0 
+                    `}
                 />
             ))}
             </div>
