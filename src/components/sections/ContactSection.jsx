@@ -2,7 +2,7 @@ import React from 'react';
 import Heading from '../utils/heading.jsx'
 import BackgroundImage from '../utils/BackgroundImage.jsx'
 
-import heroImage from '../../images/about/desktop/image-hero.jpg';
+import heroImage from '../../images/contact/desktop/image-hero.jpg';
 
 const Contact = () => {
     

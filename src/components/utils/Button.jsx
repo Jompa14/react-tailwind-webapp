@@ -2,14 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Button = ({ text = '', to }) => {
+const Button = ({ text = '', to, mode = 'black'}) => {
     
   const hasText = !!text;
   
   const buttonStyle = `
-    flex items-center justify-center w-16 h-16 rounded-md text-white
+    flex items-center justify-center w-16 h-16 rounded-md
     ${hasText ? 'px-6 py-4 w-fit' : ''}
-    bg-grey-darkest hover:bg-grey-dark active:bg-[#979797]
+    ${mode === 'black' ? 'bg-grey-darkest text-white' : 'bg-white text-grey-darkest'}
+    hover:bg-grey-dark active:bg-[#979797]
   `;
 
   const textElement = hasText ? (

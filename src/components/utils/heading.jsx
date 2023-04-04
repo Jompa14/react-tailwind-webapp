@@ -12,19 +12,19 @@ const Heading = ({ size = 'M', color = 'black', tag = 'h1', title, className }) 
       case 'L':
         return {
           fontSize: 'sm:text-[6.4vw]',
-          lineHeight: 'sm:leading-[60px]',
+          lineHeight: 'leading-[55px] sm:leading-[60px]',
           letterSpacing: 'tracking-[-2px]',
         };
       case 'S':
         return {
           fontSize: 'sm:text-[2.1vw]',
-          lineHeight: 'leading-[40px]',
+          lineHeight: 'leading-[30px] sm:leading-[45px]',
           letterSpacing: 'tracking-0',
         };
       default:
         return {
           fontSize: 'sm:text-[4.8vw]',
-          lineHeight: 'leading-[64px]',
+          lineHeight: 'leading-[45px] sm:leading-[64px]',
           letterSpacing: 'tracking-[-2px]',
         };
     }
