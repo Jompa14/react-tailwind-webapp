@@ -1,11 +1,10 @@
 import React from "react";
+import ContactSection from '../components/sections/ContactSection.jsx'
   
 const Contact = () => {
   return (
     <div>
-      <h1>
-        contact de terceiro grau
-      </h1>
+      <ContactSection />
     </div>
   );
 };
