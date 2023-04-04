@@ -45,6 +45,7 @@ module.exports = {
         },
         translucent: {
             DEFAULT: 'rgba(210, 206, 210, 0.42)',
+            dark: 'rgba(55, 54, 54, 0.49)'
         }
     },
   },
