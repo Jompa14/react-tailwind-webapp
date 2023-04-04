@@ -12,7 +12,7 @@ const Heading = ({ size = 'M', color = 'black', tag = 'h1', title, className }) 
       case 'L':
         return {
           fontSize: 'sm:text-[6.4vw]',
-          lineHeight: 'sm:leading-[90px]',
+          lineHeight: 'sm:leading-[60px]',
           letterSpacing: 'tracking-[-2px]',
         };
       case 'S':

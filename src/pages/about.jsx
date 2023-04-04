@@ -1,11 +1,10 @@
 import React from "react";
+import AboutSection from '../components/sections/aboutSection.jsx'
   
 const About = () => {
   return (
     <div>
-      <h1>
-        something about us
-      </h1>
+        <AboutSection />
     </div>
   );
 };
