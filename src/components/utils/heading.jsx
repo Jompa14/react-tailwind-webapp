@@ -12,7 +12,7 @@ const Heading = ({ size = 'M', color = 'black', tag = 'h1', title, className }) 
       case 'L':
         return {
           fontSize: 'sm:text-[6.4vw]',
-          lineHeight: 'leading-[55px] sm:leading-[60px]',
+          lineHeight: 'leading-[55px] sm:leading-[90px]',
           letterSpacing: 'tracking-[-2px]',
         };
       case 'S':
@@ -24,7 +24,7 @@ const Heading = ({ size = 'M', color = 'black', tag = 'h1', title, className }) 
       default:
         return {
           fontSize: 'sm:text-[4.8vw]',
-          lineHeight: 'leading-[45px] sm:leading-[64px]',
+          lineHeight: 'leading-[45px] sm:leading-[68px]',
           letterSpacing: 'tracking-[-2px]',
         };
     }
