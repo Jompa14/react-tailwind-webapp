@@ -79,7 +79,12 @@ function Navbar(props) {
         >
             {navItems.map((item, index) => (
                 <li key={index} className="mt-3 sm:mt-0">
-                    <Link to={item.url}>{item.label}</Link>
+                    <Link 
+                        onClick={() => setIsOpen(!isOpen)}
+                        to={item.url}
+                    >
+                        {item.label}
+                    </Link>
                 </li>
             ))}
         </ul>
