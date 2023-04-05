@@ -41,7 +41,7 @@ function Navbar(props) {
     <nav className="flex flex-wrap sm:flex-nowrap items-center px-7 md:px-0 py-10 bg-white">
       <div className="flex items-center justify-between w-full sm:w-auto">
         <a 
-            href="/" 
+            href="/react-tailwind-webapp/" 
             title="Arch Logo" 
             className="mr-20"
         >
