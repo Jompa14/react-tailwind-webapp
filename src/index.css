@@ -17,3 +17,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.footerDoubleBg {
+    background: linear-gradient(
+        to right,
+        #979797 0%,
+        #979797 75%,
+        #F2F2F2 75%,
+        #F2F2F2 100%
+    ); 
+}
+@media (max-width: 640px) {
+    .footerDoubleBg {
+        background: linear-gradient(
+            to top,
+            #979797 0%,
+            #979797 75%,
+            #F2F2F2 75%,
+            #F2F2F2 100%
+        ); 
+    }
+}
