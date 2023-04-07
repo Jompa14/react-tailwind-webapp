@@ -16,7 +16,8 @@ const Footer = () => {
             id="footer"
             className={`relative w-full footerDoubleBg
                 flex flex-col items-center
-                pb-5
+                sm:flex-row sm:justify-between
+                pb-5 sm:pb-0
             `}
         >
             <div 
@@ -31,12 +32,13 @@ const Footer = () => {
                 id="footer-items"
                 className={`
                     flex flex-col justify-center items-center
-                    my-5
+                    sm:flex-row sm:justify-start
+                    my-5 sm:w-[50%]
                 `}
             >
             {footerItems.map((item, index) => (
                 <Link
-                    className="py-3"
+                    className="py-3 sm:pr-[10%] text-grey"
                     to={item.url}
                 >
                     {item.label}
