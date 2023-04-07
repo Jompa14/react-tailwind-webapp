@@ -17,6 +17,7 @@ const SmallTeam = () => {
                 color="text-white" 
                 title="Small team, big ideas"
                 className="max-w-[60%] mb-20"  
+                tag="h3"
             />
             <Button 
                 text="About Us"

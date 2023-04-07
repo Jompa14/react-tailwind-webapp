@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Heading = ({ size = 'M', color = 'black', tag = 'h1', title, className }) => {
+const Heading = ({ size = 'M', color = 'black', tag = 'h3', title, className }) => {
   const getSizeProps = (size) => {
     switch (size) {
       case 'XL':

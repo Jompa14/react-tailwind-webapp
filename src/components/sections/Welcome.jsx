@@ -11,7 +11,7 @@ const Welcome = () => {
                 <Heading 
                     size="XL" 
                     color="text-[#e2e2e2]" 
-                    tag="h2" 
+                    tag="h3" 
                     title="Welcome" 
                 />
             </div>
