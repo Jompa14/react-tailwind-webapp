@@ -5,6 +5,7 @@ import Home from './pages';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Portfolio from './pages/portfolio';
+import FancyTitle from './components/utils/FancyTitle.jsx';
 
 import { BrowserRouter as Router, Routes, Route}
 from 'react-router-dom';
@@ -13,6 +14,7 @@ function App() {
   return (
     <Router basename="/react-tailwind-webapp">
         <div className="App md:mx-[10%]">
+            <FancyTitle />
             <Navbar
                 navItems={
                     [
