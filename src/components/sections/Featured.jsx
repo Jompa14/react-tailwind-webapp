@@ -18,7 +18,7 @@ const Featured = () => {
     return(
         <div className="w-full h-full px-10 sm:px-0 my-20">
             <div className="flex justify-between align-center">
-                <Heading title="Featured"/>
+                <Heading tag="h3" title="Featured"/>
                 <Button 
                     text="See All"
                     to="/portfolio"

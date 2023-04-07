@@ -12,8 +12,8 @@ const ContactUs = () => {
             `}>
             <Heading
                 size="M"
-                tag="h1"
-                title="Context with Us"
+                tag="h3"
+                title="Conect with Us"
                 className="max-w-[250px] sm:max-w-[400px] pb-10 sm:pb-20"
             />
             <div 

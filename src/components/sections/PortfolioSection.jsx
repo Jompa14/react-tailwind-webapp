@@ -7,6 +7,8 @@ const PortfolioSection = () => {
 
     return(
         <div className="w-full h-full px-10 sm:px-0 my-20">
+            {/* this H1 is not at the design, but is important for SEO */} 
+            <h1 class="invisible">Portfolio</h1>
             <div className="flex flex-col min-[1330px]:flex-row flex-wrap mt-20">
             {cardData.map((card, index) => (
                 <Card 

@@ -26,7 +26,7 @@ const ContactDetails = () => {
             `}>
             <Heading
                 size="M"
-                tag="h1"
+                tag="h3"
                 title="Contact Details"
                 className="max-w-[250px] sm:max-w-[500px] pb-10 sm:pb-20"
             />
