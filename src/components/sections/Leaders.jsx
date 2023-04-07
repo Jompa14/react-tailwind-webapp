@@ -19,7 +19,7 @@ const Heritage = () => {
     return(
         <div 
             className={`flex flex-col lg:flex-row justify-between 
-                relative pt-10 pl-10 mt-10
+                relative pt-10 px-10 mt-10 mb-20
             `}>
             <div  
                 className={`flex w-auto`}
