@@ -21,8 +21,8 @@ code {
 .footerDoubleBg {
     background: linear-gradient(
         to right,
-        #979797 0%,
-        #979797 75%,
+        #eeeff4 0%,
+        #eeeff4 75%,
         #F2F2F2 75%,
         #F2F2F2 100%
     ); 
@@ -31,8 +31,8 @@ code {
     .footerDoubleBg {
         background: linear-gradient(
             to top,
-            #979797 0%,
-            #979797 75%,
+            #eeeff4 0%,
+            #eeeff4 75%,
             #F2F2F2 75%,
             #F2F2F2 100%
         ); 

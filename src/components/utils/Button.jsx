@@ -7,7 +7,7 @@ const Button = ({ text = '', to, mode = 'black'}) => {
   const hasText = !!text;
   
   const buttonStyle = `
-    flex items-center justify-center w-16 h-16 rounded-md
+    flex items-center justify-center w-16 h-16 rounded-none
     ${hasText ? 'px-6 py-4 w-fit' : ''}
     ${mode === 'black' ? 'bg-grey-darkest text-white' : 'bg-white text-grey-darkest'}
     hover:bg-grey-dark active:bg-[#979797]
